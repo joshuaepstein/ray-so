@@ -230,6 +230,11 @@ export const LANGUAGES: { [index: string]: Language } = {
     className: "svelte",
     src: () => import("shiki/langs/svelte.mjs"),
   },
+  terraform: {
+    name: "Terraform",
+    className: "terraform",
+    src: () => import("shiki/langs/terraform.mjs"),
+  },
   toml: {
     name: "TOML",
     className: "toml",
