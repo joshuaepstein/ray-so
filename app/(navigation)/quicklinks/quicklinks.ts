@@ -234,6 +234,20 @@ const development: Quicklink[] = [
     name: "Search Stack Overflow",
     link: "https://stackoverflow.com/search?q={Query}",
   },
+  {
+    id: "v0",
+    name: "New v0 chat",
+    link: "https://v0.dev?q={Query}",
+  },
+  {
+    id: "aws",
+    name: "Search AWS Docs",
+    link: "https://docs.aws.amazon.com/search/doc-search.html?searchPath=documentation&searchQuery={Query}",
+    author: {
+      name: "Alan Williams",
+      link: "https://github.com/alanwill",
+    },
+  },
 ];
 
 const design: Quicklink[] = [
@@ -405,6 +419,15 @@ const search: Quicklink[] = [
     name: "Search Perplexity",
     link: "https://perplexity.ai/search?q={query}",
   },
+  {
+    id: "kagi",
+    name: "Search Kagi",
+    link: "https://kagi.com/search?q={Query}",
+    author: {
+      name: "Dakota Chambers",
+      link: "https://github.com/dcchambers",
+    },
+  },
 ];
 
 const shopping: Quicklink[] = [
@@ -427,6 +450,24 @@ const shopping: Quicklink[] = [
     id: "aliexpress",
     name: "Search AliExpress",
     link: "https://www.aliexpress.com/wholesale?SearchText={Query}",
+  },
+  {
+    id: "bhphotovideo",
+    name: "Search B&H",
+    link: "https://www.bhphotovideo.com/c/search?q={Query}",
+    author: {
+      name: "Stephen Kaplan",
+      link: "https://github.com/SKaplanOfficial",
+    },
+  },
+  {
+    id: "newegg",
+    name: "Search Newegg",
+    link: "https://www.newegg.com/p/pl?d={Query}",
+    author: {
+      name: "Stephen Kaplan",
+      link: "https://github.com/SKaplanOfficial",
+    },
   },
 ];
 
@@ -456,6 +497,30 @@ const entertainment: Quicklink[] = [
     openWith: "Music",
   },
   {
+    id: "who-sampled",
+    name: "Find Who Sampled a Song",
+    link: "https://www.whosampled.com/search/?q={Query}",
+    icon: {
+      name: "microphone",
+    },
+    author: {
+      name: "Nate Whistler",
+      link: "https://infosec.exchange/@Onyx/",
+    },
+  },
+  {
+    id: "discogs",
+    name: "Search Discogs for an Artist",
+    link: "https://www.discogs.com/search/?type=artist&title={Query}",
+    icon: {
+      name: "music",
+    },
+    author: {
+      name: "Nate Whistler",
+      link: "https://infosec.exchange/@Onyx/",
+    },
+  },
+  {
     id: "youtube",
     name: "Search YouTube",
     link: "https://www.youtube.com/results?search_query={Query}",
@@ -475,6 +540,15 @@ const entertainment: Quicklink[] = [
     name: "Search Letterboxd",
     link: "https://letterboxd.com/search/{query}/",
   },
+  {
+    id: "justwatched",
+    name: "Find out Where it's Streaming",
+    link: "https://www.justwatch.com/us/search?q={Query}",
+    author: {
+      name: "Nate Whistler",
+      link: "https://infosec.exchange/@Onyx/",
+    },
+  },
 ];
 
 const socials: Quicklink[] = [
@@ -482,7 +556,7 @@ const socials: Quicklink[] = [
     id: "tweets",
     name: "Search Tweets",
     description: "Search from a list of users",
-    link: 'https://x.com/search?q={argument name="query" | raw} from:{argument name="handle" options=" @samuelkraft ,  @raycastapp , @peduarte , @thomaspaulmann " default=" @samuelkraft " | raw}&src=typed_query&f=live',
+    link: 'https://x.com/search?q={argument name="query" | raw}%20from:{argument name="handle" options="@samuelkraft ,  @raycastapp , @peduarte , @thomaspaulmann " default="@samuelkraft" | raw}&src=typed_query&f=live',
   },
   {
     id: "linkedin",
@@ -529,9 +603,32 @@ const socials: Quicklink[] = [
     name: "Search Giphy",
     link: "https://giphy.com/{Query}",
   },
+  {
+    id: "bluesky",
+    name: "Search Bluesky",
+    link: "https://bsky.app/search?q={Query}",
+  },
 ];
 
 const misc: Quicklink[] = [
+  {
+    id: "selection-notes",
+    name: "Selection to Notes",
+    description: "Creates a note in Raycast Notes with the selected text",
+    link: `raycast://extensions/raycast/raycast-notes/create-note?fallbackText={selection}`,
+    icon: {
+      name: "fountain-tip",
+    },
+  },
+  {
+    id: "daily-note",
+    name: "Create daily note",
+    description: "Creates a note in Raycast Notes with todays date",
+    link: `raycast://extensions/raycast/raycast-notes/create-note?fallbackText=%23%20{date}`,
+    icon: {
+      name: "fountain-tip",
+    },
+  },
   {
     id: "chrome-history",
     name: "View Google Chrome History",
@@ -545,9 +642,18 @@ const misc: Quicklink[] = [
     id: "selection-translate",
     name: "Translate selected text",
     description: "Grabs the current selection and translates it with Raycast Translator",
-    link: `raycast://extensions/raycast/translator/translate?fallbackText={selection | raw}`,
+    link: `raycast://extensions/raycast/translator/translate?fallbackText={selection}`,
     icon: {
       name: "magnifying-glass",
+    },
+  },
+  {
+    id: "whois",
+    name: "Search Domain Names or IP Addresses",
+    link: "https://www.whois.com/whois/{query}",
+    author: {
+      name: "Nate Whistler",
+      link: "https://infosec.exchange/@Onyx/",
     },
   },
 ];
